@@ -1,0 +1,31 @@
+package com.test.leetcode;
+
+public class SearchInsertPosition {
+	
+	
+	 public int searchInsert(int[] nums, int target) {
+		 int first = 0;
+		 int last = nums.length -1;
+		 
+		 while (first<=last) {
+			
+			 int loc = (first + last) /2;
+			 
+			 if (target < nums[loc]) {
+				 
+				 last = loc -1;
+				
+			} else if (target > nums[loc]){
+				first = loc+1;
+
+			}else{
+				return loc;
+			}
+			 
+		}
+		 
+		 return -1;
+	        
+	    }
+
+}

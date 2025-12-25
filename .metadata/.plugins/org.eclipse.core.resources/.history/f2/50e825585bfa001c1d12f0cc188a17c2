@@ -1,0 +1,45 @@
+package com.test.leetcode;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class LongestCommonPrefix {
+
+	public String longestCommonPrefix(String[] strs) {
+
+		List<String> prefixes = new ArrayList<>();
+		
+		for (int i = 0; i < strs.length-1; i++) {
+			
+			if(strs[i].charAt(0)==strs[i+1].charAt(0)) {
+				
+				String prefix = ""+strs[i].charAt(0);
+				int smallestLength = (strs[i].length()<strs[i+1].length()) ? strs[i].length() : strs[i+1].length(); 
+				for (int j = 1; j < smallestLength; j++) {
+					
+					if(strs[i].charAt(j)==strs[i+1].charAt(j)) {
+						prefix =prefix+strs[i].charAt(j);
+						
+					}
+					
+				}
+				prefixes.add(prefix);
+				
+				
+			}
+		}
+		
+		String result = "";
+		for (int i = 0; i < prefixes.size()-1; i++) {
+			if (prefixes.get(i).length()>=prefixes.get(i+1).length()) {
+				result = prefixes.get(i);
+			}else {
+				result = prefixes.get(i+1);
+			}
+		}
+		
+		return result;
+	}
+
+}

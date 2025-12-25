@@ -1,0 +1,54 @@
+package com.test.leetcode;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class MergeTwoSortedArrayLists {
+	
+	public static List<Integer>  mergeTwoArrayLists(List<Integer> list1, List<Integer> list2) {
+		
+		List<Integer> result = new ArrayList<>();
+		
+		int indexList1=0;
+		
+		int indexList2=0;
+		
+		while (indexList1<list1.size()&&indexList2<list2.size()) {
+			
+			int item1= list1.get(indexList1);
+			int item2= list2.get(indexList2);
+		
+			if(item1<item2) {
+				result.add(item1);
+				indexList1++;
+				
+			}else if (item1>item2) {
+				result.add(item2);
+				indexList2++;
+			}else if(item1==item2){
+				result.add(item1);
+				result.add(item2);
+				indexList1++;
+				indexList2++;
+			}
+			
+		}
+		
+		if(indexList1==list1.size() && indexList2<list2.size())
+			result.addAll(list2.subList(indexList2, list2.size()));
+		
+		if(indexList2==list2.size() && indexList1<list1.size())
+			result.addAll(list1.subList(indexList1, list1.size()));
+		
+		return result;
+	}
+
+	public static void main(String[] args) {
+		
+		List<Integer> list1 = Arrays.asList(1,4,5,6,8);
+		List<Integer> list2 = Arrays.asList(0,14,15,16,18);
+		System.out.println(mergeTwoArrayLists(list1, list2));
+		System.out.println(mergeTwoArrayLists(list1, list2).size());
+	}
+}

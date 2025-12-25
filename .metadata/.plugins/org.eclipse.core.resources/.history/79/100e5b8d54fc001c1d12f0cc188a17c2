@@ -1,0 +1,42 @@
+package com.test.leetcode;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class RemoveDuplicatesFromSortedArray {
+	
+	 public static int removeDuplicates(int[] nums) {
+	        
+	 
+		 int[] expectedNums = new int[nums.length];
+		 int k = 0;
+		 expectedNums[k]=nums[0];
+		 for (int i = 1; i < nums.length; i++) {
+			 
+			 if (nums[i]!=expectedNums[k]) {
+				
+				 k++;
+				 expectedNums[k]=nums[i];
+				
+			}
+			
+		}
+		 
+		 List<Integer> result = Arrays.stream(expectedNums).boxed().collect(Collectors.toList());
+		
+		 System.out.println(result);
+		 
+		 return k+1;
+		 
+		 
+	 
+	 }
+	 
+	 public static void main(String[] args) {
+		 int[] nums = {1,1,2};
+		 
+		 System.out.println(removeDuplicates(nums));
+	}
+
+}
