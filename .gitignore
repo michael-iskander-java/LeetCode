@@ -26,4 +26,8 @@ replay_pid*
 .idea/
 .project
 .classpath
+<<<<<<< HEAD
 .settings/
+=======
+.settings/
+>>>>>>> 04959424507e981aae4afe2f273623d7d96798f1
