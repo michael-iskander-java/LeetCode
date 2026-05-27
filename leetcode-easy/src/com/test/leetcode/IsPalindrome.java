@@ -1,0 +1,29 @@
+package com.test.leetcode;
+
+//https://leetcode.com/problems/palindrome-number/
+public class IsPalindrome {
+
+	public static boolean isPalindrome(int x) {
+
+		int temp = x;
+		int reverse = 0;
+
+		if (x < 0) {
+			return false;
+		} else {
+			while (temp != 0) {
+				int remainder = temp % 10;
+				reverse = reverse * 10 + remainder;
+				temp = temp / 10;
+			}
+			
+			System.out.println(reverse);
+			return reverse == x;
+
+		}
+	}
+
+	public static void main(String[] args) {
+		System.out.println(isPalindrome(1201));
+	}
+}
