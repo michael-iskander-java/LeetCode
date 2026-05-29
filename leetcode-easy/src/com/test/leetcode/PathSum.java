@@ -1,7 +1,7 @@
 package com.test.leetcode;
 
 import com.test.leetcode.tree.TreeNode;
-//https://leetcode.com/problems/path-sum/
+//112-https://leetcode.com/problems/path-sum/
 public class PathSum {
 	 public boolean hasPathSum(TreeNode root, int targetSum) {
 		 

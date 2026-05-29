@@ -3,7 +3,7 @@ package com.test.leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
-//https://leetcode.com/problems/pascals-triangle/
+//118-https://leetcode.com/problems/pascals-triangle/
 public class PascalTriangle {
 	
 	 public static List<List<Integer>> generate(int numRows) {

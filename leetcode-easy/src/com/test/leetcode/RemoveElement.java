@@ -1,7 +1,7 @@
 package com.test.leetcode;
 
 
-//https://leetcode.com/problems/remove-element/
+//27-https://leetcode.com/problems/remove-element/
 public class RemoveElement {
 	
 public static int removeElement(int[] nums, int val) {

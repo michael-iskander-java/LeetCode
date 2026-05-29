@@ -1,5 +1,6 @@
 package com.test.leetcode;
-//https://leetcode.com/problems/implement-strstr/
+//28-https://leetcode.com/problems/implement-strstr/
+//28-https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string
 public class ImplementStrStr {
 
 	public static int strStr(String haystack, String needle) {

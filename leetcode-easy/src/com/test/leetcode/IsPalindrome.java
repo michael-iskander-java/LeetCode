@@ -1,6 +1,6 @@
 package com.test.leetcode;
 
-//https://leetcode.com/problems/palindrome-number/
+//9-https://leetcode.com/problems/palindrome-number/
 public class IsPalindrome {
 
 	public static boolean isPalindrome(int x) {

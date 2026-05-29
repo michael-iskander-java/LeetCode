@@ -3,7 +3,7 @@ package com.test.leetcode;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-//https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+//26-https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 public class RemoveDuplicatesFromSortedArray {
 	
 	 public static int removeDuplicates(int[] nums) {
