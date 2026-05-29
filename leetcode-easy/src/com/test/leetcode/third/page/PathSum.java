@@ -1,4 +1,4 @@
-package com.test.leetcode;
+package com.test.leetcode.third.page;
 
 import com.test.leetcode.tree.TreeNode;
 //112-https://leetcode.com/problems/path-sum/
